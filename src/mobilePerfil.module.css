@@ -1,0 +1,247 @@
+/*este css es de MobilPerfil.jsx solo es el login y sign up*/
+
+.perfilVentana {
+  width: 100%;
+  height: 100vh;
+}
+
+.perfilVentana .vista {
+  height: calc(100% - 52px);
+  width: 100%;
+  background: rgb(70, 55, 55);
+}
+
+.perfilVentana .footer_perfil {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 52px;
+  background: gray;
+}
+
+.perfilVentana .vista .sin_log {
+  height: 100%;
+  width: 100%;
+}
+
+.perfilVentana .vista .sin_log .lobby {
+  width: 100%;
+  height: 100%;
+}
+
+.perfilVentana .vista .sin_log .lobby .image {
+    background-image: url("../perfil.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.perfilVentana .vista .sin_log .lobby .log_vista {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0.6951155462184874) 0%,
+    rgba(64, 64, 74, 0.04245448179271705) 35%,
+    rgba(0, 0, 0, 1) 66%
+  );
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+.log_vista .first{
+    text-align:center;
+}
+
+
+.log_vista .first .nombre{
+    color:lightblue;
+}
+
+.log_vista .first .texto{
+    max-width:300px;
+}
+
+
+
+
+
+
+
+
+.log_vista .second{
+    margin-top:100px;
+    background:rgb(76, 76, 82);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:90%;
+    max-width:300px;
+    font-family: monospace;
+    font-weight: 500;
+    padding:10px;
+}
+
+
+
+.log_vista .second a{
+    background:white;
+    color:black;
+    margin:20px 0;
+    width:100%;
+    border-radius:3px;
+}
+
+.log_vista .second a > div{
+    text-align: center;
+    height:100%;
+    width:100%;
+    padding:18px 40px;
+    border-radius:3px;
+} 
+
+.log_vista .second .registro{
+    background:rgb(14, 118, 255);
+    
+}
+
+
+.log_vista .second .linea{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:green;
+    width:100%;
+}
+
+.log_vista .second .linea span{
+    display:inline-block;
+}
+
+.log_vista .second .linea span:nth-child(2){
+    margin:0 10px;
+}
+
+.log_vista .second .linea span:nth-child(1), span:nth-child(3){
+    width:100%;
+    background:rgb(85, 72, 72);
+    height:2px;
+    border-radius:10px;
+}
+
+.log_vista .second .creador{
+    margin-top:100px;
+}
+
+
+
+
+
+
+
+
+/*------------------SIGN UP - inscribirse------------*/
+
+.sign{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+
+.sign .arriba{
+   width:100%;
+   height:100%;
+}
+
+.sign .arriba .image{
+    background-image: url("../public/assets/perfil.jpg") ;
+    height:100%;
+    width:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.sign .abajo{
+  position:absolute;
+  bottom:52px; /*52px porque el footer mide asi*/
+  height:100%;
+  width:100%;
+  background: linear-gradient(180deg, rgba(2,0,36,0.6951155462184874) 0%, rgba(64,64,74,0.04245448179271705) 35%, rgba(0,0,0,1) 66%);
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*../public/assets/root.png*/
+/*./root.png*/
+.sign .abajo .root{
+   background-image:url("../root.png");
+   background-size:cover;
+   height:150px;
+   width:150px;
+   background-position:center;
+   background-repeat:no-repeat;
+   border-radius: 20% 40% 30% 70%/60% 30% 70% 40%;
+   border:1px solid rgb(253, 253, 253);
+  }
+
+.sign .abajo h1{
+  font-size:30px;
+  color:lightblue;
+}
+
+.sign .abajo .inputs{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign .abajo .inputs > div{
+  background:rgb(190, 161, 161);
+  margin:20px 0;
+}
+
+.sign .abajo .inputs > div > input{
+  padding:10px 40px 10px 5px;
+  border-radius:4px;
+}
+
+.sign .abajo .inputs > .send{
+  background:rgb(68, 68, 68);
+  border-radius:10px;
+  padding:10px;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:80%;
+}
+
+
+
+
+
+
+
+
+
+/*-----------LOGIN - iniciar sesion---------------*/

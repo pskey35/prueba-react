@@ -1,0 +1,329 @@
+/*este css es de HOME de ./Mobile.jsx*/
+html,
+body,
+#root,
+.ventana {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.ventana{
+  position:relative;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+.ventana {
+  background: rgb(134, 134, 134);
+  overflow:hidden;
+}
+
+.ventana .header {
+  background: red;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  padding-top: 3px;
+}
+
+.ventana .header .input {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 6vw;
+}
+.ventana .header .input input {
+  width: 80%;
+  padding: 3px 5px;
+  background: inherit;
+  border: 1px solid rgb(5, 5, 5);
+  transition: opacity 400ms ease;
+}
+
+.ventana .header .input .lupa {
+  margin-left: 10px;
+}
+
+.ventana .centro {
+  background: rgb(46, 46, 53);
+  height: calc(100% - 52px);
+  width: 100%;
+  position: absolute;
+}
+
+.ventana .centro::-webkit-scrollbar {
+  /*usar swiper aqui enbes de intentar ocultar el scroll no se puede*/
+}
+
+.ventana .centro .container {
+  background: rgb(31, 233, 31);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.centro .container .posts_content {
+  height: 100%;
+  width: 100%;
+  background:rgb(29, 29, 184);
+  position:relative;
+  overflow:auto;
+}
+
+.centro .container .posts_content::-webkit-scrollbar{
+  
+}
+
+
+
+.posts_content .publicacion{
+  width:100%;
+  height:100%;
+  background:red;
+  position:relative;
+}
+
+.posts_content .publicacion .post {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index:50;
+  backdrop-filter:blur(50px);
+  background:rgba(3, 3, 3, 0.555);
+}
+
+.posts_content .publicacion .image_cover{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  z-index:30;
+  background:black;
+}
+
+
+
+.posts_content .publicacion .image_cover img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
+
+.posts_content .publicacion .post .image {
+  width: 100%;
+  height: 100%;
+}
+
+.posts_content .post .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.posts_content .post .left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 3vw;
+  color: white;
+  width:70%;
+}
+
+.posts_content .post .left .left_name {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.posts_content .post .left .left_texto {
+  max-width:100%;
+  max-height: 300px;
+  color: red;
+  padding: 10px 0;
+  position: relative;
+  overflow-y: auto;
+  background: black;
+}
+
+.posts_content .post .left .left_texto::-webkit-scrollbar {
+  background: transparent;
+}
+
+.posts_content .post .left .left_texto .text {
+
+}
+
+
+
+.posts_content .post .right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: yellow;
+}
+
+
+
+.posts_content .post .right .right_content{
+    padding:10px;
+}
+
+.posts_content .post .right .right_content > div{
+    margin-bottom:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.posts_content .post .right .right_content div > div{
+    background:red;
+    display:grid;
+    place-items: center;
+}
+
+.right_content .perfil .perfil_image{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    overflow:hidden;
+    outline:2px solid white;
+}
+
+.right_content .perfil .perfil_image img{
+    width:100%;
+    height:100%;
+}
+
+
+
+
+
+
+
+
+.posts_content .post .right .right_content div > div > svg{
+    background:rgb(31, 224, 118);
+}
+
+
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index:100;
+}
+
+ .footer .ul {
+  display: flex;
+  justify-content: space-around;
+  background:black;
+}
+
+
+
+.footer .ul  >  a{
+
+    background:rgb(134, 125, 125);
+    width:100%;
+    margin:0 10px;
+}
+
+.footer .ul > a > div{
+  background:orange;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer .ul > a > div > div{/*image*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .ul > a > div > span{
+    font-size:11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------COMENTARIOS------------------------------------*/
+.comentario{
+  background:rgb(126, 108, 108);
+  width:100%;
+  position:absolute;
+  z-index:540;
+  opacity:0;
+  height:75%;
+  opacity:1;
+  bottom:0;
+  transform:translateY(100%)
+}
+
+
+.entrada{
+  animation:entradaAnim 200ms ease forwards;
+}
+
+@keyframes entradaAnim{
+  0%{
+    transform:translateY(100%);
+    opacity:.5;
+  }
+
+  100%{
+    transform:translateY(0%);
+    opacity:1;
+  }
+}
+
+
+
+
+.salida{
+  animation:salidaAnim 200ms ease forwards;
+}
+
+@keyframes salidaAnim{
+  0%{
+    transform:translateY(0%);
+    opacity:.9;
+  }
+
+  100%{
+    transform:translateY(100%);
+    opacity:0;
+  }
+}
+
+
